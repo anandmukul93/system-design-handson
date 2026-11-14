@@ -46,10 +46,19 @@ def main(check_only: bool):
         entry = "ui.js" if "ui.js" in demo else "demo.js"
         if entry not in demo:
             fail(f"{ch['dir']} has no demo/ui.js (or demo/demo.js)")
-        # tabs: logic files in the order ui.js imports them, then any others, then the entry file
-        imported = re.findall(r'from\s+"\./([^"]+)"', (d / "demo" / entry).read_text())
-        logic = [f for f in imported if f in demo and f != entry]
-        demo = logic + [f for f in demo if f != entry and f not in logic] + [entry]
+        # tabs: dependencies before the files that import them (depth-first from the entry), entry file last
+        order = []
+
+        def visit(name):
+            if name in order or name not in demo:
+                return
+            for dep in re.findall(r'from\s+"\./([^"]+)"', (d / "demo" / name).read_text()):
+                if dep != name:
+                    visit(dep)
+            order.append(name)
+
+        visit(entry)
+        demo = order[:-1] + [f for f in demo if f not in order] + [entry]
         py = []
         for p in sorted(d.rglob("*.py")):
             rel = p.relative_to(d).as_posix()
