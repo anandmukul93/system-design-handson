@@ -116,8 +116,9 @@
       K._row().append(h("label", { class: "k-ctl" }, label, i));
       return { el: i, get value() { return i.value; }, set value(v) { i.value = v; } };
     },
-    textarea(value = "", rows = 6) {
+    textarea(value = "", rows = 6, onInput) {
       const t = h("textarea", { rows }, value);
+      t.addEventListener("input", () => onInput && onInput(t.value));
       K._place(t);
       return { el: t, get value() { return t.value; }, set value(v) { t.value = v; } };
     },
