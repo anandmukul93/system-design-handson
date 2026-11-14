@@ -108,3 +108,32 @@ article.lesson table { border-collapse: collapse; }
 article.lesson td, article.lesson th { border: 1px solid var(--line); padding: 4px 8px; }
 .pager { display: flex; justify-content: space-between; gap: 10px; margin: 18px 0; flex-wrap: wrap; }
 @media (max-width: 640px) { iframe.demo { height: 760px; } article.lesson { padding: 2px 12px 12px; } }
+
+/* ---- code editor (CodeMirror 5, themed with the site tokens) ---- */
+:root { --syn-kw: #a626a4; --syn-str: #2f7d32; --syn-num: #b55b00; --syn-com: #7a8491; --syn-def: #2456c4; --syn-prop: #1b1f24; --syn-atom: #0b7285; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --syn-kw: #d291e4; --syn-str: #98c379; --syn-num: #e5a55c; --syn-com: #7f8a99; --syn-def: #7fb0ff; --syn-prop: #e6e9ee; --syn-atom: #56c8d8; }
+}
+:root[data-theme="dark"] { --syn-kw: #d291e4; --syn-str: #98c379; --syn-num: #e5a55c; --syn-com: #7f8a99; --syn-def: #7fb0ff; --syn-prop: #e6e9ee; --syn-atom: #56c8d8; }
+.tabs button .dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--warn); margin-left: 6px; vertical-align: middle; }
+.tabs button .role { font: 10.5px var(--sans); color: var(--muted); margin-left: 6px; text-transform: uppercase; letter-spacing: .04em; }
+.filebar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; padding: 5px 12px; font-size: 12px; color: var(--muted); background: var(--bg); border-bottom: 1px solid var(--line); }
+.filebar .lang { font: 600 11px var(--sans); padding: 1px 7px; border-radius: 999px; border: 1px solid var(--line); color: var(--fg); }
+.filebar .desc { flex: 1; min-width: 200px; }
+.filebar kbd { font: 11px var(--mono); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; }
+.cm-host textarea.code { min-height: 380px; }
+.cm-host .CodeMirror { height: auto; min-height: 240px; background: var(--bg); color: var(--fg); font: 13px/1.55 var(--mono); }
+.cm-host .CodeMirror-scroll { max-height: 640px; min-height: 240px; }
+.cm-host .CodeMirror-gutters { background: var(--panel); border-right: 1px solid var(--line); }
+.cm-host .CodeMirror-linenumber { color: var(--muted); }
+.cm-host .CodeMirror-cursor { border-left-color: var(--fg); }
+.cm-host .CodeMirror-selected, .cm-host .CodeMirror-focused .CodeMirror-selected { background: color-mix(in srgb, var(--accent) 25%, transparent); }
+.cm-host .CodeMirror-matchingbracket { color: var(--accent) !important; font-weight: 700; }
+.cm-host .CodeMirror .cm-keyword { color: var(--syn-kw); }
+.cm-host .CodeMirror .cm-string, .cm-host .CodeMirror .cm-string-2 { color: var(--syn-str); }
+.cm-host .CodeMirror .cm-number { color: var(--syn-num); }
+.cm-host .CodeMirror .cm-comment { color: var(--syn-com); font-style: italic; }
+.cm-host .CodeMirror .cm-def, .cm-host .CodeMirror .cm-variable-3, .cm-host .CodeMirror .cm-type { color: var(--syn-def); }
+.cm-host .CodeMirror .cm-variable, .cm-host .CodeMirror .cm-variable-2, .cm-host .CodeMirror .cm-property { color: var(--syn-prop); }
+.cm-host .CodeMirror .cm-atom, .cm-host .CodeMirror .cm-builtin { color: var(--syn-atom); }
+.cm-host .CodeMirror .cm-operator, .cm-host .CodeMirror .cm-meta { color: var(--muted); }

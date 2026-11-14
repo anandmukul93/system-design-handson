@@ -7,6 +7,7 @@ Fails if any of the 111 concepts is missing or unmapped, if a concept points at 
 or if a chapter has no README.md or demo/demo.js.
 """
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -41,15 +42,21 @@ def main(check_only: bool):
         d = ROOT / ch["dir"]
         if not (d / "README.md").exists():
             fail(f"{ch['dir']} has no README.md")
-        if not (d / "demo" / "demo.js").exists():
-            fail(f"{ch['dir']} has no demo/demo.js")
+        demo = sorted(p.name for p in (d / "demo").glob("*.js"))
+        entry = "ui.js" if "ui.js" in demo else "demo.js"
+        if entry not in demo:
+            fail(f"{ch['dir']} has no demo/ui.js (or demo/demo.js)")
+        # tabs: logic files in the order ui.js imports them, then any others, then the entry file
+        imported = re.findall(r'from\s+"\./([^"]+)"', (d / "demo" / entry).read_text())
+        logic = [f for f in imported if f in demo and f != entry]
+        demo = logic + [f for f in demo if f != entry and f not in logic] + [entry]
         py = []
         for p in sorted(d.rglob("*.py")):
             rel = p.relative_to(d).as_posix()
             if rel.startswith("app/") or any(f"import {m}" in p.read_text() or f"from {m}" in p.read_text() for m in BROWSER_SKIP):
                 continue
             py.append(rel)
-        chapters.append({**ch, "concepts": [c["id"] for c in concepts if ch["num"] in c["chapters"]], "python": py})
+        chapters.append({**ch, "concepts": [c["id"] for c in concepts if ch["num"] in c["chapters"]], "python": py, "demo": demo})
 
     if check_only:
         print(f"ok: {len(chapters)} chapters, {len(concepts)} concepts mapped")
