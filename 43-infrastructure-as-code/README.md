@@ -27,7 +27,7 @@ Kubernetes packages: templates plus a values file. `helm template` renders Go te
 ## 3. Demo
 Edit a desired-infrastructure document in the browser and watch a plan update live with create, update, replace and delete actions in dependency order, then 'apply' it to see the state change. A second panel renders a Helm-style template from editable values.
 
-- **In the browser:** [43-infrastructure-as-code on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=43-infrastructure-as-code). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [43-infrastructure-as-code on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=43-infrastructure-as-code). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`resources.js`](demo/resources.js), [`dependency_order.js`](demo/dependency_order.js), [`plan.js`](demo/plan.js), [`apply.js`](demo/apply.js), [`template.js`](demo/template.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=43-infrastructure-as-code>.
 
 ## 4. Build it

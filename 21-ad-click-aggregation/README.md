@@ -28,7 +28,7 @@ Dedupe by click id, commit offsets with results, and reconcile with a batch job 
 ## 3. Demo
 Click events stream in, some late, some duplicated. Watch tumbling windows fill, the watermark advance and close them, duplicates get dropped and late events get diverted, with a live top-N ads table per window.
 
-- **In the browser:** [21-ad-click-aggregation on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=21-ad-click-aggregation). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [21-ad-click-aggregation on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=21-ad-click-aggregation). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`click_stream.js`](demo/click_stream.js), [`window_aggregator.js`](demo/window_aggregator.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=21-ad-click-aggregation>.
 
 ## 4. Build it

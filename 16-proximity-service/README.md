@@ -28,7 +28,7 @@ Location data is read-heavy and changes slowly: cache cell -> business ids and s
 ## 3. Demo
 A map grid: click to search near a point, switch between geohash cells (with neighbours) and a quadtree, adjust precision and radius, and watch which cells or quads are scanned and which businesses match.
 
-- **In the browser:** [16-proximity-service on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=16-proximity-service). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [16-proximity-service on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=16-proximity-service). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`geohash_index.js`](demo/geohash_index.js), [`quadtree_index.js`](demo/quadtree_index.js), [`search.js`](demo/search.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=16-proximity-service>.
 
 ## 4. Build it

@@ -28,7 +28,7 @@ Store only post ids in the feed cache and hydrate from post and user caches.
 ## 3. Demo
 A social graph with a few celebrities: post as different users and watch fan-out writes ripple through follower feeds, switch between push, pull and hybrid, and compare write cost and feed read latency on live counters.
 
-- **In the browser:** [11-news-feed on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=11-news-feed). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [11-news-feed on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=11-news-feed). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`social_graph.js`](demo/social_graph.js), [`push_feed.js`](demo/push_feed.js), [`pull_feed.js`](demo/pull_feed.js), [`hybrid_feed.js`](demo/hybrid_feed.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=11-news-feed>.
 
 ## 4. Build it

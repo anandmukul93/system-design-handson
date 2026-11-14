@@ -14,12 +14,21 @@ what to do next. The [showcase site](https://anandmukul93.github.io/system-desig
 
 ## The demo sandbox
 
-- Demos live in `NN-slug/demo/demo.js` as plain JavaScript. They run in an `<iframe sandbox="allow-scripts">` with no
-  access to the site, your cookies or storage.
-- Each demo uses a tiny helper kit ([`site/assets/kit.js`](site/assets/kit.js)) for sliders, buttons, charts,
-  canvases and logs, so the interesting code is the simulation itself.
-- On the chapter page, **Edit source** opens the demo code; your edits are kept in your browser and **Reset** restores
-  the original.
+- Demos live in `NN-slug/demo/` as plain JavaScript, split so the idea is separate from the page:
+  - **Logic files** (`token_bucket.js`, `hash_ring.js`, ...) hold one concept or one variant each. They export plain
+    classes and functions, never touch the page, and take anything impure (a clock, a random source, a hash function)
+    as an argument. Variants of the same idea share one contract, written at the top of the file, so you can swap them
+    or add your own.
+  - **`ui.js`** is the only file that builds controls. It imports the logic with
+    `import { name } from "./file.js"` and talks to it only through that contract.
+- Each `ui.js` uses a tiny helper kit ([`site/assets/kit.js`](site/assets/kit.js)) for sliders, buttons, charts,
+  canvases and logs.
+- Demos run in an `<iframe sandbox="allow-scripts">` with no access to the site, your cookies or storage.
+- On the chapter page, **Edit source** opens every file as a tab in a syntax-highlighting editor (JavaScript for the
+  demo, Python for the stubs and tests). Tabs are ordered so that a file comes after the files it imports, and
+  `ui.js` is last. Your edits are kept in your browser; **Reset** restores the originals.
+- The first line of every demo file is a `//` comment saying what the file is; the editor shows it under the tabs.
+- Demo code is formatted with Prettier (`.prettierrc`, 110 columns).
 
 ## Python in the browser
 
@@ -31,5 +40,5 @@ threads; run them locally.
 ## Writing a new chapter
 
 Copy [`03-design-framework/CHAPTER_TEMPLATE.md`](03-design-framework/CHAPTER_TEMPLATE.md), add the chapter to
-`course.json`, map its concepts in `concepts.json`, write `demo/demo.js`, and run `make site-data` (which also checks
+`course.json`, map its concepts in `concepts.json`, write the demo as logic files plus `demo/ui.js`, and run `make site-data` (which also checks
 that all 111 concepts are mapped).

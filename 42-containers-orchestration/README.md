@@ -33,7 +33,7 @@ Liveness failing means 'restart me' (deadlocked, wedged). Readiness failing mean
 ## 3. Demo
 A mini cluster: set the desired replica count, kill pods, fail a node and watch the reconciler restore state. Flip a pod's liveness or readiness and see it restarted with backoff or pulled from the Service endpoints while traffic keeps flowing to the rest.
 
-- **In the browser:** [42-containers-orchestration on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=42-containers-orchestration). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [42-containers-orchestration on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=42-containers-orchestration). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`cluster.js`](demo/cluster.js), [`kubelet.js`](demo/kubelet.js), [`scheduler.js`](demo/scheduler.js), [`replica_controller.js`](demo/replica_controller.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=42-containers-orchestration>.
 
 ## 4. Build it

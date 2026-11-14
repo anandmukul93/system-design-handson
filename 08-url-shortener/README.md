@@ -28,7 +28,7 @@ Redirects vastly outnumber creations, so cache code -> URL in Redis.
 ## 3. Demo
 Shorten URLs and watch the base62 encoding of each ID digit by digit, then click short links through a simulated cache and database to see hits, misses and 301 vs 302 behaviour on repeat visits.
 
-- **In the browser:** [08-url-shortener on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=08-url-shortener). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [08-url-shortener on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=08-url-shortener). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`counter_base62.js`](demo/counter_base62.js), [`hash_strategy.js`](demo/hash_strategy.js), [`lru_cache.js`](demo/lru_cache.js), [`shortener.js`](demo/shortener.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=08-url-shortener>.
 
 ## 4. Build it

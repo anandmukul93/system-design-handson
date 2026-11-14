@@ -33,7 +33,7 @@ The fastest fix for a bad deploy. Keep the previous artifact, make deploys rever
 ## 3. Demo
 Pick a strategy (rolling, blue-green, canary) and deploy a buggy or healthy version to a fleet of 10 instances. Watch instance versions change, traffic split, error rate move and the automatic rollback fire. A flag panel shows which users see a feature as you drag the rollout percentage.
 
-- **In the browser:** [45-deployments-releases on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=45-deployments-releases). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [45-deployments-releases on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=45-deployments-releases). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`rolling.js`](demo/rolling.js), [`blue_green.js`](demo/blue_green.js), [`canary.js`](demo/canary.js), [`rollout.js`](demo/rollout.js), [`traffic.js`](demo/traffic.js), [`feature_flag.js`](demo/feature_flag.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=45-deployments-releases>.
 
 ## 4. Build it

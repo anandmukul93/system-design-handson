@@ -31,7 +31,7 @@ Compare your ledger with the PSP's settlement file nightly to find mismatches.
 ## 3. Demo
 Run checkouts against a mock PSP that sometimes times out or fails. Watch the payment state machine, the idempotent retries, the double-entry ledger entries balancing, and a reconciliation report highlighting mismatches.
 
-- **In the browser:** [26-payment-system on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=26-payment-system). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [26-payment-system on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=26-payment-system). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`psp.js`](demo/psp.js), [`ledger.js`](demo/ledger.js), [`payment_service.js`](demo/payment_service.js), [`reconciliation.js`](demo/reconciliation.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=26-payment-system>.
 
 ## 4. Build it

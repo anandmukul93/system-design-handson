@@ -30,7 +30,7 @@ A cluster must agree on exactly one leader per term. Raft: followers that miss h
 ## 3. Demo
 A Raft election visualiser with five nodes: watch heartbeats, kill the leader, partition the cluster and see terms increase and a new leader win with a majority. A second panel shows keys landing on shards under hash vs range partitioning as you add hot keys.
 
-- **In the browser:** [34-replication-consensus on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=34-replication-consensus). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [34-replication-consensus on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=34-replication-consensus). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`raft.js`](demo/raft.js), [`partitioning.js`](demo/partitioning.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=34-replication-consensus>.
 
 ## 4. Build it

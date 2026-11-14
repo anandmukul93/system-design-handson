@@ -33,7 +33,7 @@ Time-triggered work with a 5-field expression (minute hour day-of-month month da
 ## 3. Demo
 An animated work queue: producers add jobs, workers take them, some crash mid-job and their messages reappear after the visibility timeout, poison messages land in the DLQ. A second panel evaluates any cron expression and lists its next ten run times.
 
-- **In the browser:** [36-async-processing on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=36-async-processing). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [36-async-processing on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=36-async-processing). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`work_queue.js`](demo/work_queue.js), [`worker_pool.js`](demo/worker_pool.js), [`cron.js`](demo/cron.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=36-async-processing>.
 
 ## 4. Build it

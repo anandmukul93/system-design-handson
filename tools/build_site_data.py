@@ -4,7 +4,7 @@ usage: python tools/build_site_data.py          # write both files
        python tools/build_site_data.py --check  # only validate (used in CI)
 
 Fails if any of the 111 concepts is missing or unmapped, if a concept points at an unknown chapter,
-or if a chapter has no README.md or demo/demo.js.
+or if a chapter has no README.md or demo/ui.js.
 """
 import json
 import re

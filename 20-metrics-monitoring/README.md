@@ -28,7 +28,7 @@ Rules evaluate queries periodically; alerts must hold for a duration, get dedupl
 ## 3. Demo
 Live metrics stream from simulated hosts into a chart. Write a query with label filters and aggregation, change the downsampling step, and create an alert rule with a threshold and 'for' duration, then run a CPU spike and watch it go pending and then fire.
 
-- **In the browser:** [20-metrics-monitoring on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=20-metrics-monitoring). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [20-metrics-monitoring on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=20-metrics-monitoring). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`tsdb.js`](demo/tsdb.js), [`alert_rule.js`](demo/alert_rule.js), [`hosts.js`](demo/hosts.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=20-metrics-monitoring>.
 
 ## 4. Build it

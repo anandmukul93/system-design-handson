@@ -27,7 +27,7 @@ A written review after an incident: summary, impact, timeline, root causes and c
 ## 3. Demo
 An incident simulator: an alert fires, you choose actions (check dashboards, roll back, fail over, page help) against a clock while users are affected, and at the end it builds the timeline, computes MTTD/MTTA/MTTR and drafts a postmortem you can edit. A rotation panel generates a fair on-call schedule with overrides.
 
-- **In the browser:** [51-incidents-oncall on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=51-incidents-oncall). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [51-incidents-oncall on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=51-incidents-oncall). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`incident.js`](demo/incident.js), [`postmortem.js`](demo/postmortem.js), [`rotation.js`](demo/rotation.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=51-incidents-oncall>.
 
 ## 4. Build it

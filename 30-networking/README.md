@@ -30,7 +30,7 @@ RPC over HTTP/2 with Protocol Buffers: compact binary messages (varint-encoded f
 ## 3. Demo
 Three panels: a step-by-step DNS resolution with a TTL cache you can expire; a packet-loss simulator comparing HTTP/1.1, HTTP/2 over TCP and HTTP/3 over QUIC when streams share a lossy link; and a protobuf varint encoder that shows the bytes for any number.
 
-- **In the browser:** [30-networking on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=30-networking). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [30-networking on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=30-networking). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`dns_resolver.js`](demo/dns_resolver.js), [`http_versions.js`](demo/http_versions.js), [`varint.js`](demo/varint.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=30-networking>.
 
 ## 4. Build it

@@ -28,7 +28,7 @@ Clients send heartbeats; a user is offline after missing them for a timeout, and
 ## 3. Demo
 Two chat servers with users connected to each: send 1:1 and group messages and watch them route through pub/sub, disconnect a device and see it sync from its last message id on reconnect, and stop heartbeats to flip presence.
 
-- **In the browser:** [12-chat-system on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=12-chat-system). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [12-chat-system on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=12-chat-system). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`chat_cluster.js`](demo/chat_cluster.js), [`presence.js`](demo/presence.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=12-chat-system>.
 
 ## 4. Build it

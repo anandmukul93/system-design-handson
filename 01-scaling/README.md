@@ -31,7 +31,7 @@ Static assets come from edge servers near users; session state moves to a shared
 ## 3. Demo
 Grow an architecture one click at a time: single server, separate DB, load balancer, replicas, cache, CDN. Traffic flows as animated dots, and live gauges show latency, server load and cache hit rate as you raise the request rate or kill components.
 
-- **In the browser:** [01-scaling on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=01-scaling). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [01-scaling on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=01-scaling). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`capacity_model.js`](demo/capacity_model.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=01-scaling>.
 
 ## 4. Build it

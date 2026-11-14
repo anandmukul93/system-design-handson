@@ -28,7 +28,7 @@ Hundreds of thousands of updates per second need many Redis pub/sub nodes, place
 ## 3. Demo
 Friends move around a map. Each location update travels through its pub/sub channel to subscribers, and only friends inside the radius light up. Change the radius, the update interval and the number of users and watch message rates.
 
-- **In the browser:** [17-nearby-friends on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=17-nearby-friends). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [17-nearby-friends on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=17-nearby-friends). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`world.js`](demo/world.js), [`location_pubsub.js`](demo/location_pubsub.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=17-nearby-friends>.
 
 ## 4. Build it

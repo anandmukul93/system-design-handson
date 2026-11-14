@@ -31,7 +31,7 @@ Infinite calendars and session ids create endless URLs: cap depth and URL length
 ## 3. Demo
 Crawl a generated fake web: watch the frontier's priority and per-host queues fill and drain, pages light up as they're fetched, politeness delays throttle hosts, duplicates get skipped and a spider trap is caught by the depth limit.
 
-- **In the browser:** [09-web-crawler on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=09-web-crawler). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [09-web-crawler on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=09-web-crawler). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`fake_web.js`](demo/fake_web.js), [`crawler.js`](demo/crawler.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=09-web-crawler>.
 
 ## 4. Build it

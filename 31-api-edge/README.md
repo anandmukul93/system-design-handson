@@ -33,7 +33,7 @@ Server-to-server callbacks: you POST events to a URL the customer registered. Si
 ## 3. Demo
 A live gateway playground: send requests with different paths and API-Version headers and watch them route to v1/v2 backends; change backend weights and see the smooth weighted round-robin sequence; and sign a webhook, tamper with it or replay it late to see verification fail.
 
-- **In the browser:** [31-api-edge on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=31-api-edge). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [31-api-edge on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=31-api-edge). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`router.js`](demo/router.js), [`weighted_round_robin.js`](demo/weighted_round_robin.js), [`webhook_signature.js`](demo/webhook_signature.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=31-api-edge>.
 
 ## 4. Build it

@@ -36,7 +36,7 @@ Splitting a big table into pieces by range (dates) or hash inside one database: 
 ## 3. Demo
 A real SQLite database running in your browser (sql.js). Toggle indexes and watch the query plan change from SCAN to SEARCH; compare the N+1 loader with a JOIN by counting queries; compare OFFSET with keyset pagination; and run a connection pool simulator with adjustable pool size and load.
 
-- **In the browser:** [33-databases-in-practice on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=33-databases-in-practice). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [33-databases-in-practice on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=33-databases-in-practice). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`seed.js`](demo/seed.js), [`index_plan.js`](demo/index_plan.js), [`query_loading.js`](demo/query_loading.js), [`pagination.js`](demo/pagination.js), [`connection_pool.js`](demo/connection_pool.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=33-databases-in-practice>.
 
 ## 4. Build it

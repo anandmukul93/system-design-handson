@@ -36,7 +36,7 @@ Right-size instances, use spot/preemptible for stateless work, commit to reserve
 ## 3. Demo
 A day of traffic (with a spike) hits your service. Choose fixed servers, target-tracking autoscaling or serverless, tune target utilisation, cooldown and idle timeout, and watch capacity, latency, cold starts and the running cost bill side by side.
 
-- **In the browser:** [41-scaling-serverless-cost on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=41-scaling-serverless-cost). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [41-scaling-serverless-cost on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=41-scaling-serverless-cost). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`servers.js`](demo/servers.js), [`fixed_servers.js`](demo/fixed_servers.js), [`autoscaling.js`](demo/autoscaling.js), [`serverless.js`](demo/serverless.js), [`demand.js`](demo/demand.js), [`simulate.js`](demo/simulate.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=41-scaling-serverless-cost>.
 
 ## 4. Build it

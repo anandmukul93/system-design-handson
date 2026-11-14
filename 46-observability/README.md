@@ -45,7 +45,7 @@ Targets for SLIs over a window, e.g. 99.9% of requests succeed over 30 days. The
 ## 3. Demo
 A small microservice call graph handles live simulated traffic. Inject latency or errors into one service and watch a trace waterfall, structured log lines carrying the same trace id, the SLI chart and the error-budget burn-down, with burn-rate alerts firing at the right moment.
 
-- **In the browser:** [46-observability on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=46-observability). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [46-observability on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=46-observability). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`call_graph.js`](demo/call_graph.js), [`tracer.js`](demo/tracer.js), [`structured_log.js`](demo/structured_log.js), [`slo.js`](demo/slo.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=46-observability>.
 
 ## 4. Build it

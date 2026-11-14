@@ -31,7 +31,7 @@ Many app servers must share counts: keep them in Redis and make check-and-update
 ## 3. Demo
 Fire requests (single clicks or a steady stream) at all five algorithms side by side. Each shows its internal state (tokens, queue, window counts, log) and a timeline of allowed and rejected requests, so you can see the fixed-window edge burst happen.
 
-- **In the browser:** [04-rate-limiter on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=04-rate-limiter). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [04-rate-limiter on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=04-rate-limiter). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`token_bucket.js`](demo/token_bucket.js), [`leaking_bucket.js`](demo/leaking_bucket.js), [`fixed_window.js`](demo/fixed_window.js), [`sliding_log.js`](demo/sliding_log.js), [`sliding_counter.js`](demo/sliding_counter.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=04-rate-limiter>.
 
 ## 4. Build it

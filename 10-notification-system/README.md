@@ -28,7 +28,7 @@ Respect opt-outs per channel and cap notifications per user so you don't spam.
 ## 3. Demo
 Send notification bursts through per-channel queues to mock providers. Dial each provider's failure rate and latency and watch retries with backoff, dedupe of repeated events and messages landing in the dead-letter queue.
 
-- **In the browser:** [10-notification-system on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=10-notification-system). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [10-notification-system on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=10-notification-system). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`backoff.js`](demo/backoff.js), [`pipeline.js`](demo/pipeline.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=10-notification-system>.
 
 ## 4. Build it

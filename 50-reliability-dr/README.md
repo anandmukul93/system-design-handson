@@ -33,7 +33,7 @@ Deliberately inject failures (kill instances, add latency, drop a region) under 
 ## 3. Demo
 A world map with three regions serving traffic. Pull the plug on a primary database or a whole region and watch failure detection, replica promotion by highest LSN, traffic rerouting and how many writes were lost. A chaos panel runs experiments against a steady-state hypothesis, and a backup panel shows which snapshots a retention policy keeps.
 
-- **In the browser:** [50-reliability-dr on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=50-reliability-dr). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [50-reliability-dr on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=50-reliability-dr). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`failover.js`](demo/failover.js), [`replication.js`](demo/replication.js), [`chaos.js`](demo/chaos.js), [`backup_retention.js`](demo/backup_retention.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=50-reliability-dr>.
 
 ## 4. Build it

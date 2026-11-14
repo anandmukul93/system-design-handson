@@ -28,7 +28,7 @@ Split by prefix ranges with a shard map balanced on real traffic, not by first l
 ## 3. Demo
 Type into a search box backed by a trie built from sample queries. The trie draws itself, highlights the path for your prefix and shows the cached top-k at each node; add query frequency and watch suggestions reorder.
 
-- **In the browser:** [13-search-autocomplete on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=13-search-autocomplete). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [13-search-autocomplete on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=13-search-autocomplete). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`trie.js`](demo/trie.js), [`sample_queries.js`](demo/sample_queries.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=13-search-autocomplete>.
 
 ## 4. Build it

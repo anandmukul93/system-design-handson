@@ -36,7 +36,7 @@ A lock shared by processes on different machines (Redis, etcd, ZooKeeper). It mu
 ## 3. Demo
 Watch threads race on a shared counter with and without a lock; run the dining philosophers and see a deadlock form in the wait-for graph, then fix it with lock ordering; and replay the classic distributed-lock failure where a GC pause lets two clients write, then turn on fencing tokens.
 
-- **In the browser:** [38-concurrency-locking on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=38-concurrency-locking). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [38-concurrency-locking on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=38-concurrency-locking). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`counter_race.js`](demo/counter_race.js), [`philosophers.js`](demo/philosophers.js), [`fencing.js`](demo/fencing.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=38-concurrency-locking>.
 
 ## 4. Build it

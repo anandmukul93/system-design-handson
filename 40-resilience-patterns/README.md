@@ -33,7 +33,7 @@ When consumers are slower than producers, push back instead of buffering forever
 ## 3. Demo
 A client calls a flaky downstream service. Dial up its failure rate and latency, then switch timeouts, retries (with and without jitter), the circuit breaker and a bounded queue on and off. Charts show success rate, latency, load on the downstream and the breaker's state over time.
 
-- **In the browser:** [40-resilience-patterns on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=40-resilience-patterns). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [40-resilience-patterns on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=40-resilience-patterns). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`downstream.js`](demo/downstream.js), [`circuit_breaker.js`](demo/circuit_breaker.js), [`backoff.js`](demo/backoff.js), [`client.js`](demo/client.js), [`server.js`](demo/server.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=40-resilience-patterns>.
 
 ## 4. Build it

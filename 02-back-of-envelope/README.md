@@ -28,7 +28,7 @@ QPS = DAU x actions per day / 86,400, peak is 2-10x average. Storage = items/day
 ## 3. Demo
 An estimation calculator with sliders for DAU, actions per user, payload size, retention and peak factor that shows QPS, storage and bandwidth with units, plus an interactive latency ladder that animates how long each operation takes relative to the others.
 
-- **In the browser:** [02-back-of-envelope on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=02-back-of-envelope). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [02-back-of-envelope on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=02-back-of-envelope). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`estimate.js`](demo/estimate.js), [`availability.js`](demo/availability.js), [`latency_numbers.js`](demo/latency_numbers.js), [`format.js`](demo/format.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=02-back-of-envelope>.
 
 ## 4. Build it

@@ -26,7 +26,7 @@ A plain HTTP response with `text/event-stream` that never ends: the server write
 ## 3. Demo
 Three clients side by side receiving the same event stream from a simulated server: WebSocket, SSE and long polling. Watch requests, bytes on the wire and delivery delay for each, and drop the connection to see how each one recovers.
 
-- **In the browser:** [32-realtime-transports on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=32-realtime-transports). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [32-realtime-transports on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=32-realtime-transports). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`event_stream.js`](demo/event_stream.js), [`client.js`](demo/client.js), [`websocket.js`](demo/websocket.js), [`sse.js`](demo/sse.js), [`long_polling.js`](demo/long_polling.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=32-realtime-transports>.
 
 ## 4. Build it

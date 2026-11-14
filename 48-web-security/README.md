@@ -39,7 +39,7 @@ Your server fetches a URL the attacker chose, reaching internal services or clou
 ## 3. Demo
 A vulnerable sandbox app with 'attack' and 'defend' toggles: inject SQL into a login form against a real in-browser SQLite, plant an XSS payload in comments and see it escaped, send cross-origin requests through a CORS policy editor, try SSRF URLs against a validator, and fire a request flood at a WAF and rate limiter.
 
-- **In the browser:** [48-web-security on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=48-web-security). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [48-web-security on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=48-web-security). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`sql_login.js`](demo/sql_login.js), [`xss.js`](demo/xss.js), [`cors.js`](demo/cors.js), [`ssrf.js`](demo/ssrf.js), [`flood.js`](demo/flood.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=48-web-security>.
 
 ## 4. Build it

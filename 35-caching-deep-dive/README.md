@@ -30,7 +30,7 @@ Ways to get stale data out: short TTLs, purge by URL, purge by surrogate key/tag
 ## 3. Demo
 A CDN simulator: users in three regions request pages through edge caches. Tune TTL and stale-while-revalidate, purge a tag, and watch hit ratio, origin load and staleness update live. A second panel shows an LRU evicting keys step by step.
 
-- **In the browser:** [35-caching-deep-dive on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=35-caching-deep-dive). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [35-caching-deep-dive on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=35-caching-deep-dive). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`origin.js`](demo/origin.js), [`edge_cache.js`](demo/edge_cache.js), [`lru.js`](demo/lru.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=35-caching-deep-dive>.
 
 ## 4. Build it

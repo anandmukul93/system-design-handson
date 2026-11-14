@@ -24,7 +24,7 @@ Data outlives code: stored records, events and API payloads carry a schema versi
 ## 3. Demo
 A step-by-step expand/contract migration on an in-browser SQLite database while a simulated old and new app version keep reading and writing: try the unsafe one-step rename and watch the old version crash, then do it safely. A second panel upcasts v1/v2/v3 records.
 
-- **In the browser:** [49-schema-evolution on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=49-schema-evolution). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [49-schema-evolution on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=49-schema-evolution). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`database.js`](demo/database.js), [`app_versions.js`](demo/app_versions.js), [`migration.js`](demo/migration.js), [`upcast.js`](demo/upcast.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=49-schema-evolution>.
 
 ## 4. Build it

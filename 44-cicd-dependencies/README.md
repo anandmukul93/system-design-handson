@@ -30,7 +30,7 @@ Two packages need incompatible versions of a shared dependency, so no install sa
 ## 3. Demo
 A pipeline board where you edit files and dependency ranges and press 'Push': steps light up as cache hits or rebuilds based on their input hashes, and the resolver either produces a lockfile or explains exactly which constraints conflict.
 
-- **In the browser:** [44-cicd-dependencies on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=44-cicd-dependencies). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [44-cicd-dependencies on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=44-cicd-dependencies). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`pipeline.js`](demo/pipeline.js), [`build_cache.js`](demo/build_cache.js), [`registry.js`](demo/registry.js), [`semver.js`](demo/semver.js), [`resolver.js`](demo/resolver.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=44-cicd-dependencies>.
 
 ## 4. Build it

@@ -39,7 +39,7 @@ Wall clocks on different machines drift and jump (NTP). Never order events acros
 ## 3. Demo
 An interactive simulator: pick N/W/R and partition the cluster to see which operations stay available; drag the slow-backend probability and fan-out to watch P99 explode; and send messages between nodes with skewed clocks to compare wall-clock ordering with Lamport timestamps.
 
-- **In the browser:** [29-principles on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=29-principles). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [29-principles on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=29-principles). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`quorum.js`](demo/quorum.js), [`tail_latency.js`](demo/tail_latency.js), [`clocks.js`](demo/clocks.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=29-principles>.
 
 ## 4. Build it

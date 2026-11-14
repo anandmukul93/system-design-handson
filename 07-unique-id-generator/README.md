@@ -28,7 +28,7 @@ If the clock goes backwards, a Snowflake generator could repeat IDs; it must wai
 ## 3. Demo
 Generate IDs from several simulated machines and see each ID broken into timestamp, datacenter, machine and sequence bits. Speed up the request rate to overflow the sequence, or push a machine's clock backwards and watch the generator react.
 
-- **In the browser:** [07-unique-id-generator on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=07-unique-id-generator). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [07-unique-id-generator on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=07-unique-id-generator). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`snowflake.js`](demo/snowflake.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=07-unique-id-generator>.
 
 ## 4. Build it

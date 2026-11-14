@@ -31,7 +31,7 @@ Single-threaded hot path, no locks or allocations, mmap'd event log and colocate
 ## 3. Demo
 Place buy and sell orders (or start a random order flow) and watch the order book depth ladder update, fills print with price-time priority, candlesticks build, and a second engine replay the event log to the identical book.
 
-- **In the browser:** [28-stock-exchange on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=28-stock-exchange). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [28-stock-exchange on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=28-stock-exchange). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`matching_engine.js`](demo/matching_engine.js), [`candles.js`](demo/candles.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=28-stock-exchange>.
 
 ## 4. Build it

@@ -31,7 +31,7 @@ A per-user inverted index serves full-text queries.
 ## 3. Demo
 A mailbox UI fed by simulated incoming mail: messages thread together by reply headers, unread counts update, and a search box queries an inverted index that you can watch being built as mail arrives.
 
-- **In the browser:** [23-distributed-email on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=23-distributed-email). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [23-distributed-email on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=23-distributed-email). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`mailbox.js`](demo/mailbox.js), [`inverted_index.js`](demo/inverted_index.js), [`mail_generator.js`](demo/mail_generator.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=23-distributed-email>.
 
 ## 4. Build it

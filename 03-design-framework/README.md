@@ -28,7 +28,7 @@ Summarise, name failure modes, monitoring and what you'd do with more time.
 ## 3. Demo
 An interactive mock interview: a timer walks through the four phases with prompts for the chosen system, and a checklist tracks whether you covered requirements, estimates, API, data model, scaling and failure modes before time runs out.
 
-- **In the browser:** [03-design-framework on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=03-design-framework). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [03-design-framework on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=03-design-framework). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`framework.js`](demo/framework.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=03-design-framework>.
 
 ## 4. Build it

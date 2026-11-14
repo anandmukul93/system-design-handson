@@ -28,7 +28,7 @@ Serve popular videos from the CDN and long-tail ones from origin storage to cont
 ## 3. Demo
 Upload a simulated video and watch the transcoding DAG execute stage by stage across a worker pool, then play the result while you change network bandwidth and see the player switch between renditions.
 
-- **In the browser:** [14-youtube on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=14-youtube). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [14-youtube on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=14-youtube). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`transcode_dag.js`](demo/transcode_dag.js), [`adaptive_bitrate.js`](demo/adaptive_bitrate.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=14-youtube>.
 
 ## 4. Build it

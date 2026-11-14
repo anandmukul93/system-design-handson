@@ -31,7 +31,7 @@ Commit before processing = at-most-once; after = at-least-once; exactly-once nee
 ## 3. Demo
 Producers write to a topic with several partitions; watch messages append to segment logs, consumers in a group read and commit offsets, a consumer leave and trigger rebalancing, and a leader fail over to an in-sync replica.
 
-- **In the browser:** [19-distributed-message-queue on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=19-distributed-message-queue). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [19-distributed-message-queue on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=19-distributed-message-queue). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`partitioner.js`](demo/partitioner.js), [`broker_cluster.js`](demo/broker_cluster.js), [`consumer_group.js`](demo/consumer_group.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=19-distributed-message-queue>.
 
 ## 4. Build it

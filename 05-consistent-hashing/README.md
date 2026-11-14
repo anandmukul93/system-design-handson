@@ -28,7 +28,7 @@ Walk clockwise and pick the next N distinct physical servers to store replicas.
 ## 3. Demo
 A ring you can play with: add and remove servers, change the number of virtual nodes, and watch keys move. Counters show how many keys moved compared with modulo hashing and how evenly load is spread.
 
-- **In the browser:** [05-consistent-hashing on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=05-consistent-hashing). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [05-consistent-hashing on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=05-consistent-hashing). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`hashing.js`](demo/hashing.js), [`modulo_router.js`](demo/modulo_router.js), [`hash_ring.js`](demo/hash_ring.js), [`measure.js`](demo/measure.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=05-consistent-hashing>.
 
 ## 4. Build it

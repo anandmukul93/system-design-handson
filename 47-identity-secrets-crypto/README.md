@@ -39,7 +39,7 @@ Everything on the network uses TLS, including internal traffic: zero-trust assum
 ## 3. Demo
 In the browser with WebCrypto: issue JWTs under key k1, rotate to k2 and watch old tokens still verify until k1 is retired; tamper with a token to break its signature; envelope-encrypt a message with AES-GCM and a wrapped data key; run the PKCE flow step by step; and evaluate IAM policies against requests.
 
-- **In the browser:** [47-identity-secrets-crypto on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=47-identity-secrets-crypto). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [47-identity-secrets-crypto on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=47-identity-secrets-crypto). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`encoding.js`](demo/encoding.js), [`jwt.js`](demo/jwt.js), [`envelope.js`](demo/envelope.js), [`pkce.js`](demo/pkce.js), [`iam.js`](demo/iam.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=47-identity-secrets-crypto>.
 
 ## 4. Build it

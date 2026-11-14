@@ -24,7 +24,7 @@ In a GC language a leak is memory that is still reachable but never used again: 
 ## 3. Demo
 A heap you can draw: allocate objects, add references, make a cycle, drop roots and run either reference counting or mark-and-sweep to see what each frees. A second panel simulates a service with a leaky cache and shows memory and GC pauses climbing over time, then the fix.
 
-- **In the browser:** [39-memory-gc on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=39-memory-gc). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [39-memory-gc on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=39-memory-gc). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`heap.js`](demo/heap.js), [`reference_counting.js`](demo/reference_counting.js), [`mark_and_sweep.js`](demo/mark_and_sweep.js), [`leaky_cache.js`](demo/leaky_cache.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=39-memory-gc>.
 
 ## 4. Build it

@@ -31,7 +31,7 @@ Writes go to a commit log and memtable, flush to sorted SSTables, and compaction
 ## 3. Demo
 A five-node cluster on a ring: write and read keys with adjustable N, W and R, partition nodes and watch quorums succeed or fail, see hinted handoff and conflicting siblings with vector clocks, and step through an LSM write path from memtable to SSTables and compaction.
 
-- **In the browser:** [06-key-value-store on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=06-key-value-store). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [06-key-value-store on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=06-key-value-store). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`vector_clock.js`](demo/vector_clock.js), [`cluster.js`](demo/cluster.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=06-key-value-store>.
 
 ## 4. Build it

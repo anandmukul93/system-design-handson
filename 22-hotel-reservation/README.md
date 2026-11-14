@@ -31,7 +31,7 @@ Reservation and payment in different services need a saga or 2PC.
 ## 3. Demo
 Unleash dozens of simulated users on the last rooms of a hotel. Switch between no locking, pessimistic locking, optimistic locking and a DB constraint, and watch double bookings, retries and throughput for each.
 
-- **In the browser:** [22-hotel-reservation on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=22-hotel-reservation). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [22-hotel-reservation on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=22-hotel-reservation). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`race.js`](demo/race.js), [`no_locking.js`](demo/no_locking.js), [`pessimistic.js`](demo/pessimistic.js), [`optimistic.js`](demo/optimistic.js), [`db_constraint.js`](demo/db_constraint.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=22-hotel-reservation>.
 
 ## 4. Build it

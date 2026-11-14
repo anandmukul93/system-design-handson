@@ -28,7 +28,7 @@ If two devices edit the same version, keep both (conflict copy); long polling te
 ## 3. Demo
 Edit a file on two simulated devices: blocks light up as changed or deduped, only changed blocks upload, and concurrent edits produce a conflict copy. A meter shows bytes uploaded vs file size.
 
-- **In the browser:** [15-google-drive on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=15-google-drive). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [15-google-drive on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=15-google-drive). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`blocks.js`](demo/blocks.js), [`sync_server.js`](demo/sync_server.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=15-google-drive>.
 
 ## 4. Build it

@@ -22,7 +22,7 @@ Every chapter follows the same [learning methodology](METHODOLOGY.md):
 
 1. **Concepts**: read the explanation of each concept.
 2. **Trade-offs and optimizations**: learn the knobs and their costs.
-3. **Demo**: play with the browser simulation, then edit its code.
+3. **Demo**: play with the browser simulation, then edit its code. Each variant of a concept is its own file, separate from the UI.
 4. **Build it**: design (`DESIGN.md`), make the tests pass, do the milestones on real infrastructure.
 5. **Break it**: run the failure experiments.
 6. **Review**: answer the questions and write up your results.

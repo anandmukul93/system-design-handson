@@ -28,7 +28,7 @@ Driver location pings feed a stream that updates edge weights; ETAs and reroutes
 ## 3. Demo
 A road grid you can draw walls on: run Dijkstra and A* side by side and watch their frontiers expand, compare nodes explored, then add traffic to some roads and see the route and ETA change.
 
-- **In the browser:** [18-google-maps on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=18-google-maps). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [18-google-maps on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=18-google-maps). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`grid_map.js`](demo/grid_map.js), [`search.js`](demo/search.js), [`dijkstra.js`](demo/dijkstra.js), [`a_star.js`](demo/a_star.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=18-google-maps>.
 
 ## 4. Build it

@@ -28,7 +28,7 @@ Moving money across shards needs TC/C (try, confirm, cancel) or a saga with comp
 ## 3. Demo
 Issue deposits and transfers and watch commands validate, events append to the log and balances update. Replay the log from scratch or from a snapshot to get the same state, and run a cross-shard transfer that fails midway and compensates.
 
-- **In the browser:** [27-digital-wallet on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=27-digital-wallet). The demo runs in a sandbox; press **Edit source** to change [`demo/demo.js`](demo/demo.js) and **Run** it again.
+- **In the browser:** [27-digital-wallet on the showcase site](https://anandmukul93.github.io/system-design-handson/site/chapter.html?ch=27-digital-wallet). The demo runs in a sandbox; press **Edit source** to open the demo's files as tabs. The logic is in [`events.js`](demo/events.js), [`wallet.js`](demo/wallet.js); [`ui.js`](demo/ui.js) only wires the controls to it. Change any file and **Run** it again.
 - **Locally:** `make site`, then open <http://localhost:8000/site/chapter.html?ch=27-digital-wallet>.
 
 ## 4. Build it
