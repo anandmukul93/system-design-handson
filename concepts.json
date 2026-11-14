@@ -1,0 +1,941 @@
+[
+ {
+  "id": 1,
+  "name": "Rate Limiting",
+  "status": "covered",
+  "chapters": [
+   "04"
+  ]
+ },
+ {
+  "id": 2,
+  "name": "Caching",
+  "status": "covered",
+  "chapters": [
+   "01",
+   "35"
+  ]
+ },
+ {
+  "id": 3,
+  "name": "Load Balancing",
+  "status": "covered",
+  "chapters": [
+   "01",
+   "31"
+  ]
+ },
+ {
+  "id": 4,
+  "name": "Reverse Proxies",
+  "status": "deepened",
+  "chapters": [
+   "31",
+   "01"
+  ]
+ },
+ {
+  "id": 5,
+  "name": "API Gateways",
+  "status": "deepened",
+  "chapters": [
+   "31",
+   "04"
+  ]
+ },
+ {
+  "id": 6,
+  "name": "CI/CD",
+  "status": "new",
+  "chapters": [
+   "44"
+  ]
+ },
+ {
+  "id": 7,
+  "name": "Docker",
+  "status": "deepened",
+  "chapters": [
+   "42",
+   "01"
+  ]
+ },
+ {
+  "id": 8,
+  "name": "Kubernetes",
+  "status": "new",
+  "chapters": [
+   "42"
+  ]
+ },
+ {
+  "id": 9,
+  "name": "Service Discovery",
+  "status": "deepened",
+  "chapters": [
+   "42",
+   "12"
+  ]
+ },
+ {
+  "id": 10,
+  "name": "Circuit Breakers",
+  "status": "new",
+  "chapters": [
+   "40"
+  ]
+ },
+ {
+  "id": 11,
+  "name": "Timeouts",
+  "status": "deepened",
+  "chapters": [
+   "40",
+   "09"
+  ]
+ },
+ {
+  "id": 12,
+  "name": "Retries",
+  "status": "covered",
+  "chapters": [
+   "40",
+   "10",
+   "26"
+  ]
+ },
+ {
+  "id": 13,
+  "name": "Exponential Backoff",
+  "status": "covered",
+  "chapters": [
+   "40",
+   "10"
+  ]
+ },
+ {
+  "id": 14,
+  "name": "Idempotency",
+  "status": "covered",
+  "chapters": [
+   "37",
+   "26",
+   "22"
+  ]
+ },
+ {
+  "id": 15,
+  "name": "Message Queues",
+  "status": "covered",
+  "chapters": [
+   "19",
+   "36"
+  ]
+ },
+ {
+  "id": 16,
+  "name": "Pub/Sub",
+  "status": "covered",
+  "chapters": [
+   "36",
+   "17"
+  ]
+ },
+ {
+  "id": 17,
+  "name": "Event-Driven Architecture",
+  "status": "deepened",
+  "chapters": [
+   "36",
+   "27"
+  ]
+ },
+ {
+  "id": 18,
+  "name": "Distributed Transactions",
+  "status": "deepened",
+  "chapters": [
+   "37",
+   "27"
+  ]
+ },
+ {
+  "id": 19,
+  "name": "Saga Pattern",
+  "status": "deepened",
+  "chapters": [
+   "37",
+   "27"
+  ]
+ },
+ {
+  "id": 20,
+  "name": "Dead Letter Queues",
+  "status": "covered",
+  "chapters": [
+   "36",
+   "10"
+  ]
+ },
+ {
+  "id": 21,
+  "name": "Cron Jobs",
+  "status": "new",
+  "chapters": [
+   "36"
+  ]
+ },
+ {
+  "id": 22,
+  "name": "WebSockets",
+  "status": "covered",
+  "chapters": [
+   "32",
+   "12",
+   "17"
+  ]
+ },
+ {
+  "id": 23,
+  "name": "Long Polling",
+  "status": "deepened",
+  "chapters": [
+   "32",
+   "12",
+   "15"
+  ]
+ },
+ {
+  "id": 24,
+  "name": "Server-Sent Events",
+  "status": "new",
+  "chapters": [
+   "32"
+  ]
+ },
+ {
+  "id": 25,
+  "name": "Database Indexing",
+  "status": "deepened",
+  "chapters": [
+   "33",
+   "16"
+  ]
+ },
+ {
+  "id": 26,
+  "name": "Query Optimization",
+  "status": "new",
+  "chapters": [
+   "33"
+  ]
+ },
+ {
+  "id": 27,
+  "name": "N+1 Queries",
+  "status": "new",
+  "chapters": [
+   "33"
+  ]
+ },
+ {
+  "id": 28,
+  "name": "Connection Pooling",
+  "status": "new",
+  "chapters": [
+   "33"
+  ]
+ },
+ {
+  "id": 29,
+  "name": "Read Replicas",
+  "status": "covered",
+  "chapters": [
+   "33",
+   "01"
+  ]
+ },
+ {
+  "id": 30,
+  "name": "Sharding",
+  "status": "covered",
+  "chapters": [
+   "34",
+   "05",
+   "06"
+  ]
+ },
+ {
+  "id": 31,
+  "name": "Partitioning",
+  "status": "deepened",
+  "chapters": [
+   "34",
+   "19",
+   "21"
+  ]
+ },
+ {
+  "id": 32,
+  "name": "Replication",
+  "status": "covered",
+  "chapters": [
+   "34",
+   "06",
+   "19"
+  ]
+ },
+ {
+  "id": 33,
+  "name": "Leader Election",
+  "status": "deepened",
+  "chapters": [
+   "34",
+   "19"
+  ]
+ },
+ {
+  "id": 34,
+  "name": "CAP Theorem",
+  "status": "deepened",
+  "chapters": [
+   "29",
+   "06"
+  ]
+ },
+ {
+  "id": 35,
+  "name": "Eventual Consistency",
+  "status": "deepened",
+  "chapters": [
+   "29",
+   "06"
+  ]
+ },
+ {
+  "id": 36,
+  "name": "Optimistic Locking",
+  "status": "covered",
+  "chapters": [
+   "38",
+   "22"
+  ]
+ },
+ {
+  "id": 37,
+  "name": "Pessimistic Locking",
+  "status": "covered",
+  "chapters": [
+   "38",
+   "22"
+  ]
+ },
+ {
+  "id": 38,
+  "name": "Distributed Locks",
+  "status": "new",
+  "chapters": [
+   "38"
+  ]
+ },
+ {
+  "id": 39,
+  "name": "Race Conditions",
+  "status": "deepened",
+  "chapters": [
+   "38",
+   "04"
+  ]
+ },
+ {
+  "id": 40,
+  "name": "Deadlocks",
+  "status": "new",
+  "chapters": [
+   "38"
+  ]
+ },
+ {
+  "id": 41,
+  "name": "Memory Leaks",
+  "status": "new",
+  "chapters": [
+   "39"
+  ]
+ },
+ {
+  "id": 42,
+  "name": "Garbage Collection",
+  "status": "new",
+  "chapters": [
+   "39"
+  ]
+ },
+ {
+  "id": 43,
+  "name": "Thread Safety",
+  "status": "deepened",
+  "chapters": [
+   "38",
+   "07"
+  ]
+ },
+ {
+  "id": 44,
+  "name": "Backpressure",
+  "status": "new",
+  "chapters": [
+   "40"
+  ]
+ },
+ {
+  "id": 45,
+  "name": "Autoscaling",
+  "status": "new",
+  "chapters": [
+   "41"
+  ]
+ },
+ {
+  "id": 46,
+  "name": "Horizontal Scaling",
+  "status": "covered",
+  "chapters": [
+   "01",
+   "41"
+  ]
+ },
+ {
+  "id": 47,
+  "name": "Vertical Scaling",
+  "status": "covered",
+  "chapters": [
+   "01",
+   "41"
+  ]
+ },
+ {
+  "id": 48,
+  "name": "CDN",
+  "status": "deepened",
+  "chapters": [
+   "35",
+   "14"
+  ]
+ },
+ {
+  "id": 49,
+  "name": "Edge Caching",
+  "status": "new",
+  "chapters": [
+   "35"
+  ]
+ },
+ {
+  "id": 50,
+  "name": "Cache Invalidation",
+  "status": "deepened",
+  "chapters": [
+   "35",
+   "01"
+  ]
+ },
+ {
+  "id": 51,
+  "name": "Feature Flags",
+  "status": "new",
+  "chapters": [
+   "45"
+  ]
+ },
+ {
+  "id": 52,
+  "name": "Blue-Green Deployment",
+  "status": "new",
+  "chapters": [
+   "45"
+  ]
+ },
+ {
+  "id": 53,
+  "name": "Canary Releases",
+  "status": "new",
+  "chapters": [
+   "45"
+  ]
+ },
+ {
+  "id": 54,
+  "name": "Rolling Deployments",
+  "status": "new",
+  "chapters": [
+   "45"
+  ]
+ },
+ {
+  "id": 55,
+  "name": "Rollbacks",
+  "status": "new",
+  "chapters": [
+   "45"
+  ]
+ },
+ {
+  "id": 56,
+  "name": "Health Checks",
+  "status": "deepened",
+  "chapters": [
+   "42",
+   "01"
+  ]
+ },
+ {
+  "id": 57,
+  "name": "Liveness & Readiness Probes",
+  "status": "new",
+  "chapters": [
+   "42"
+  ]
+ },
+ {
+  "id": 58,
+  "name": "Monitoring",
+  "status": "covered",
+  "chapters": [
+   "46",
+   "20"
+  ]
+ },
+ {
+  "id": 59,
+  "name": "Logging",
+  "status": "new",
+  "chapters": [
+   "46"
+  ]
+ },
+ {
+  "id": 60,
+  "name": "Distributed Tracing",
+  "status": "new",
+  "chapters": [
+   "46"
+  ]
+ },
+ {
+  "id": 61,
+  "name": "Metrics",
+  "status": "covered",
+  "chapters": [
+   "46",
+   "20"
+  ]
+ },
+ {
+  "id": 62,
+  "name": "Alerts",
+  "status": "covered",
+  "chapters": [
+   "46",
+   "20"
+  ]
+ },
+ {
+  "id": 63,
+  "name": "SLOs",
+  "status": "new",
+  "chapters": [
+   "46"
+  ]
+ },
+ {
+  "id": 64,
+  "name": "SLIs",
+  "status": "new",
+  "chapters": [
+   "46"
+  ]
+ },
+ {
+  "id": 65,
+  "name": "Error Budgets",
+  "status": "new",
+  "chapters": [
+   "46"
+  ]
+ },
+ {
+  "id": 66,
+  "name": "Observability",
+  "status": "new",
+  "chapters": [
+   "46"
+  ]
+ },
+ {
+  "id": 67,
+  "name": "Secrets Management",
+  "status": "new",
+  "chapters": [
+   "47"
+  ]
+ },
+ {
+  "id": 68,
+  "name": "IAM",
+  "status": "new",
+  "chapters": [
+   "47"
+  ]
+ },
+ {
+  "id": 69,
+  "name": "OAuth",
+  "status": "new",
+  "chapters": [
+   "47"
+  ]
+ },
+ {
+  "id": 70,
+  "name": "JWT Rotation",
+  "status": "new",
+  "chapters": [
+   "47"
+  ]
+ },
+ {
+  "id": 71,
+  "name": "TLS",
+  "status": "new",
+  "chapters": [
+   "47"
+  ]
+ },
+ {
+  "id": 72,
+  "name": "Encryption at Rest",
+  "status": "deepened",
+  "chapters": [
+   "47",
+   "24"
+  ]
+ },
+ {
+  "id": 73,
+  "name": "Encryption in Transit",
+  "status": "new",
+  "chapters": [
+   "47"
+  ]
+ },
+ {
+  "id": 74,
+  "name": "WAF",
+  "status": "new",
+  "chapters": [
+   "48"
+  ]
+ },
+ {
+  "id": 75,
+  "name": "DDoS Protection",
+  "status": "new",
+  "chapters": [
+   "48"
+  ]
+ },
+ {
+  "id": 76,
+  "name": "CORS",
+  "status": "new",
+  "chapters": [
+   "48"
+  ]
+ },
+ {
+  "id": 77,
+  "name": "CSRF",
+  "status": "new",
+  "chapters": [
+   "48"
+  ]
+ },
+ {
+  "id": 78,
+  "name": "SQL Injection",
+  "status": "new",
+  "chapters": [
+   "48"
+  ]
+ },
+ {
+  "id": 79,
+  "name": "XSS",
+  "status": "new",
+  "chapters": [
+   "48"
+  ]
+ },
+ {
+  "id": 80,
+  "name": "SSRF",
+  "status": "new",
+  "chapters": [
+   "48"
+  ]
+ },
+ {
+  "id": 81,
+  "name": "Database Migrations",
+  "status": "new",
+  "chapters": [
+   "49"
+  ]
+ },
+ {
+  "id": 82,
+  "name": "Schema Versioning",
+  "status": "new",
+  "chapters": [
+   "49"
+  ]
+ },
+ {
+  "id": 83,
+  "name": "Disaster Recovery",
+  "status": "new",
+  "chapters": [
+   "50"
+  ]
+ },
+ {
+  "id": 84,
+  "name": "Backups",
+  "status": "new",
+  "chapters": [
+   "50"
+  ]
+ },
+ {
+  "id": 85,
+  "name": "Failover",
+  "status": "deepened",
+  "chapters": [
+   "50",
+   "28"
+  ]
+ },
+ {
+  "id": 86,
+  "name": "Multi-Region Deployment",
+  "status": "new",
+  "chapters": [
+   "50"
+  ]
+ },
+ {
+  "id": 87,
+  "name": "Chaos Engineering",
+  "status": "new",
+  "chapters": [
+   "50"
+  ]
+ },
+ {
+  "id": 88,
+  "name": "Cost Optimization",
+  "status": "new",
+  "chapters": [
+   "41"
+  ]
+ },
+ {
+  "id": 89,
+  "name": "Cold Starts",
+  "status": "new",
+  "chapters": [
+   "41"
+  ]
+ },
+ {
+  "id": 90,
+  "name": "Serverless Limits",
+  "status": "new",
+  "chapters": [
+   "41"
+  ]
+ },
+ {
+  "id": 91,
+  "name": "Latency",
+  "status": "new",
+  "chapters": [
+   "29"
+  ]
+ },
+ {
+  "id": 92,
+  "name": "Throughput",
+  "status": "new",
+  "chapters": [
+   "29"
+  ]
+ },
+ {
+  "id": 93,
+  "name": "P99 Latency",
+  "status": "deepened",
+  "chapters": [
+   "29",
+   "01"
+  ]
+ },
+ {
+  "id": 94,
+  "name": "Tail Latency",
+  "status": "new",
+  "chapters": [
+   "29"
+  ]
+ },
+ {
+  "id": 95,
+  "name": "Network Partitions",
+  "status": "deepened",
+  "chapters": [
+   "29",
+   "06"
+  ]
+ },
+ {
+  "id": 96,
+  "name": "Clock Skew",
+  "status": "deepened",
+  "chapters": [
+   "29",
+   "07"
+  ]
+ },
+ {
+  "id": 97,
+  "name": "DNS",
+  "status": "new",
+  "chapters": [
+   "30"
+  ]
+ },
+ {
+  "id": 98,
+  "name": "TCP vs UDP",
+  "status": "new",
+  "chapters": [
+   "30"
+  ]
+ },
+ {
+  "id": 99,
+  "name": "HTTP/2 & HTTP/3",
+  "status": "new",
+  "chapters": [
+   "30"
+  ]
+ },
+ {
+  "id": 100,
+  "name": "gRPC",
+  "status": "new",
+  "chapters": [
+   "30"
+  ]
+ },
+ {
+  "id": 101,
+  "name": "Webhooks",
+  "status": "deepened",
+  "chapters": [
+   "31",
+   "26"
+  ]
+ },
+ {
+  "id": 102,
+  "name": "API Versioning",
+  "status": "new",
+  "chapters": [
+   "31"
+  ]
+ },
+ {
+  "id": 103,
+  "name": "Semantic Versioning",
+  "status": "new",
+  "chapters": [
+   "44"
+  ]
+ },
+ {
+  "id": 104,
+  "name": "Infrastructure as Code",
+  "status": "new",
+  "chapters": [
+   "43"
+  ]
+ },
+ {
+  "id": 105,
+  "name": "Terraform",
+  "status": "new",
+  "chapters": [
+   "43"
+  ]
+ },
+ {
+  "id": 106,
+  "name": "Helm Charts",
+  "status": "new",
+  "chapters": [
+   "43"
+  ]
+ },
+ {
+  "id": 107,
+  "name": "Build Caching",
+  "status": "new",
+  "chapters": [
+   "44"
+  ]
+ },
+ {
+  "id": 108,
+  "name": "Dependency Hell",
+  "status": "new",
+  "chapters": [
+   "44"
+  ]
+ },
+ {
+  "id": 109,
+  "name": "Production Incidents",
+  "status": "new",
+  "chapters": [
+   "51"
+  ]
+ },
+ {
+  "id": 110,
+  "name": "On-Call",
+  "status": "new",
+  "chapters": [
+   "51"
+  ]
+ },
+ {
+  "id": 111,
+  "name": "Postmortems",
+  "status": "new",
+  "chapters": [
+   "51"
+  ]
+ }
+]

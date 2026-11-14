@@ -1,0 +1,15 @@
+name: Collect tests
+on: [push, pull_request]
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install pytest
+      # Stubs raise NotImplementedError until you implement them, so CI only checks that every test collects
+      # and that the site data is consistent. Run `pytest NN-slug` locally to see your progress.
+      - run: pytest --collect-only -q
+      - run: python tools/build_site_data.py --check

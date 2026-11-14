@@ -16,6 +16,7 @@ def test_cycle():
         stages({"a": ["b"], "b": ["a"]})
 
 
+@pytest.mark.needs_threads
 def test_run_respects_deps():
     done = []
     tasks = {name: (lambda n=name: done.append(n)) for name in TRANSCODE_DAG}

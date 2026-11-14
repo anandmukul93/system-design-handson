@@ -1,3 +1,4 @@
+import pytest
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date
 
@@ -29,6 +30,7 @@ def test_overbooking_ratio():
     assert sum(results) == 11
 
 
+@pytest.mark.needs_threads
 def test_no_double_booking_under_concurrency():
     inv = Inventory()
     inv.add("h", "king", D, 2, total=5)

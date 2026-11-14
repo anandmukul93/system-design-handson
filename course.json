@@ -1,0 +1,566 @@
+{
+ "phases": [
+  {
+   "id": 0,
+   "name": "Foundations",
+   "description": "Tools and habits you will reuse in every later project."
+  },
+  {
+   "id": 1,
+   "name": "Building blocks",
+   "description": "Small components that later systems are made of. Keep them; you will import them later."
+  },
+  {
+   "id": 2,
+   "name": "Classic product systems",
+   "description": "End-to-end services with an API, storage, cache and queue."
+  },
+  {
+   "id": 3,
+   "name": "Geo and real-time location",
+   "description": "Spatial indexes, routing and streaming location updates."
+  },
+  {
+   "id": 4,
+   "name": "Data infrastructure",
+   "description": "The systems other systems run on: logs, metrics, streams and blobs."
+  },
+  {
+   "id": 5,
+   "name": "Money and correctness",
+   "description": "Concurrency, idempotency, ledgers and determinism, where bugs cost real money."
+  },
+  {
+   "id": 6,
+   "name": "Fundamentals deep dives",
+   "description": "Theory, networking, APIs, databases, replication and caching: the vocabulary under every design."
+  },
+  {
+   "id": 7,
+   "name": "Distributed patterns",
+   "description": "Async work, transactions, concurrency, memory, resilience and scaling economics."
+  },
+  {
+   "id": 8,
+   "name": "Production engineering",
+   "description": "Containers, infrastructure as code, CI/CD, releases, observability, schema changes, DR and incidents."
+  },
+  {
+   "id": 9,
+   "name": "Security",
+   "description": "Identity, secrets, encryption and web application attacks and defences."
+  }
+ ],
+ "chapters": [
+  {
+   "num": "01",
+   "dir": "01-scaling",
+   "title": "Scale from Zero to Millions of Users",
+   "phase": 0,
+   "goal": "Take one tiny web app from a single box to a load-balanced, replicated, cached deployment on your laptop, and measure what each step buys you.",
+   "short": "Nginx + replicas + Postgres replica + Redis cache, load tested",
+   "effort": "3-4 days",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/01.%20Scaling"
+  },
+  {
+   "num": "02",
+   "dir": "02-back-of-envelope",
+   "title": "Back-of-the-Envelope Estimation",
+   "phase": 0,
+   "goal": "Build a small estimation toolkit you will reuse in every later chapter, and calibrate your intuition by measuring real latencies on your own machine.",
+   "short": "Estimation toolkit + latency bench",
+   "effort": "1 day",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/02.%20Back%20Of%20the%20Envelope%20Estimation"
+  },
+  {
+   "num": "03",
+   "dir": "03-design-framework",
+   "title": "A Framework for System Design Interviews",
+   "phase": 0,
+   "goal": "Turn the 4-step framework into a habit: a design-doc template you fill for every chapter, plus a timer that runs you through a 45-minute mock.",
+   "short": "Design template + 45-min mock timer",
+   "effort": "1 day + ongoing",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/03.%20System%20Design%20Framework"
+  },
+  {
+   "num": "04",
+   "dir": "04-rate-limiter",
+   "title": "Design a Rate Limiter",
+   "phase": 1,
+   "goal": "Implement all five rate-limiting algorithms, then ship one of them as distributed middleware backed by Redis.",
+   "short": "5 algorithms + Redis Lua limiter middleware",
+   "effort": "3-4 days",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/04.%20Rate%20Limiter"
+  },
+  {
+   "num": "05",
+   "dir": "05-consistent-hashing",
+   "title": "Design Consistent Hashing",
+   "phase": 1,
+   "goal": "Build a consistent hash ring with virtual nodes and prove, with numbers, that it moves far fewer keys than `hash % N`.",
+   "short": "Hash ring with vnodes + key-movement experiment",
+   "effort": "2 days",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/05.%20Consistent%20Hashing"
+  },
+  {
+   "num": "06",
+   "dir": "06-key-value-store",
+   "title": "Design a Key-Value Store",
+   "phase": 1,
+   "goal": "Build a mini Dynamo/Cassandra: an LSM storage engine on one node, then a 3+ node cluster with quorum reads/writes, vector clocks and hinted handoff.",
+   "short": "LSM engine + quorum cluster with vector clocks",
+   "effort": "2 weeks",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/06.%20Key-Value%20Store"
+  },
+  {
+   "num": "07",
+   "dir": "07-unique-id-generator",
+   "title": "Design a Unique ID Generator",
+   "phase": 1,
+   "goal": "Build a Snowflake-style 64-bit ID service and stress it for uniqueness, ordering and clock skew, then compare against UUIDs and a ticket server.",
+   "short": "Snowflake ID service",
+   "effort": "2 days",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/07.%20Unique-Id%20Generator"
+  },
+  {
+   "num": "08",
+   "dir": "08-url-shortener",
+   "title": "Design a URL Shortener",
+   "phase": 2,
+   "goal": "Ship a working TinyURL clone: base62 short codes from your chapter 7 IDs, cached redirects, and click analytics.",
+   "short": "TinyURL clone with cache + analytics",
+   "effort": "3-4 days",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/08.%20URL%20Shortener"
+  },
+  {
+   "num": "09",
+   "dir": "09-web-crawler",
+   "title": "Design a Web Crawler",
+   "phase": 2,
+   "goal": "Build a polite, distributed-ready crawler with a real URL frontier (priority + politeness queues), run against a local fake web so you can crawl millions of pages safely.",
+   "short": "Polite crawler over a fake local web",
+   "effort": "1 week",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/09.%20Web%20Crawler"
+  },
+  {
+   "num": "10",
+   "dir": "10-notification-system",
+   "title": "Design a Notification System",
+   "phase": 2,
+   "goal": "Build a multi-channel notification service (push, SMS, email) with per-channel queues, retries, dedupe, user settings and delivery tracking, using mock providers that fail on purpose.",
+   "short": "Multi-channel notifier with retries + dedupe",
+   "effort": "1 week",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/10.%20Notification%20System"
+  },
+  {
+   "num": "11",
+   "dir": "11-news-feed",
+   "title": "Design a News Feed System",
+   "phase": 2,
+   "goal": "Build a feed service with fan-out on write for normal users and fan-out on read for celebrities, and measure the trade-off.",
+   "short": "Hybrid fan-out feed on Redis",
+   "effort": "1 week",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/11.%20News%20Feed%20System"
+  },
+  {
+   "num": "12",
+   "dir": "12-chat-system",
+   "title": "Design a Chat System",
+   "phase": 2,
+   "goal": "Build a WebSocket chat with 1:1 and small group chats, per-channel message ordering, multi-device sync and online presence via heartbeats.",
+   "short": "WebSocket chat with sync + presence",
+   "effort": "1-2 weeks",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/12.%20Chat%20System"
+  },
+  {
+   "num": "13",
+   "dir": "13-search-autocomplete",
+   "title": "Design a Search Autocomplete System",
+   "phase": 2,
+   "goal": "Build a typeahead service: a trie with cached top-k at every node, rebuilt offline from a query log, served fast from memory.",
+   "short": "Top-k trie typeahead service",
+   "effort": "4-5 days",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/13.%20Search%20Autocomplete"
+  },
+  {
+   "num": "14",
+   "dir": "14-youtube",
+   "title": "Design YouTube",
+   "phase": 2,
+   "goal": "Build a mini video platform: resumable upload to object storage, a DAG-based transcoding pipeline with ffmpeg producing HLS renditions, and adaptive streaming playback.",
+   "short": "Upload + ffmpeg DAG transcoding + HLS playback",
+   "effort": "1-2 weeks",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/14.%20Youtube"
+  },
+  {
+   "num": "15",
+   "dir": "15-google-drive",
+   "title": "Design Google Drive",
+   "phase": 2,
+   "goal": "Build a Dropbox-like sync client and server: block-level chunking with dedupe, delta upload, file versioning, conflict detection and change notifications via long polling.",
+   "short": "Block-level sync client + server",
+   "effort": "1-2 weeks",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/15.%20Google%20Drive"
+  },
+  {
+   "num": "16",
+   "dir": "16-proximity-service",
+   "title": "Proximity Service",
+   "phase": 3,
+   "goal": "Build a Yelp-style \"businesses near me\" service and implement geohash and quadtree indexes yourself, then compare them with PostGIS.",
+   "short": "Geohash + quadtree \"near me\" search",
+   "effort": "1 week",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/16.%20Proximity%20Service"
+  },
+  {
+   "num": "17",
+   "dir": "17-nearby-friends",
+   "title": "Nearby Friends",
+   "phase": 3,
+   "goal": "Build a real-time \"friends near you\" feature: clients stream locations over WebSockets, servers fan them out to friends through Redis pub/sub, and only nearby updates reach the user.",
+   "short": "Live nearby friends over WebSockets + pub/sub",
+   "effort": "1 week",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/17.%20Nearby%20Friends"
+  },
+  {
+   "num": "18",
+   "dir": "18-google-maps",
+   "title": "Google Maps",
+   "phase": 3,
+   "goal": "Build the three pillars of a maps product at city scale: a tile server, a routing service on a real road graph with A*, and a location ingestion pipeline that feeds live traffic into ETAs.",
+   "short": "Tile server + A* routing on OSM + live ETA",
+   "effort": "1-2 weeks",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/18.%20Google%20Maps"
+  },
+  {
+   "num": "19",
+   "dir": "19-distributed-message-queue",
+   "title": "Distributed Message Queue",
+   "phase": 4,
+   "goal": "Build a mini Kafka: segmented append-only logs per partition, offsets, consumer groups with committed offsets, batching, and leader/follower replication with ISR.",
+   "short": "Mini Kafka: segmented log, groups, replication",
+   "effort": "2 weeks",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/19.%20Distributed%20Message%20Queue"
+  },
+  {
+   "num": "20",
+   "dir": "20-metrics-monitoring",
+   "title": "Metrics Monitoring and Alerting System",
+   "phase": 4,
+   "goal": "Build a small Prometheus/Datadog: agents push metrics through a queue into your own time-series store, with a query API, downsampling, alert rules and a Grafana dashboard.",
+   "short": "Mini Prometheus: TSDB, rollups, alerting",
+   "effort": "1-2 weeks",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/20.%20Metrics%20Monitoring%20and%20Alerting%20System"
+  },
+  {
+   "num": "21",
+   "dir": "21-ad-click-aggregation",
+   "title": "Ad Click Event Aggregation",
+   "phase": 4,
+   "goal": "Build a streaming pipeline that counts ad clicks per minute and the top-N ads, with event-time windows, watermarks for late events, dedupe and exactly-once offsets, then reconcile against a batch job.",
+   "short": "Windowed click aggregation with watermarks",
+   "effort": "1-2 weeks",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/21.%20Ad%20Click%20Event%20Aggregation"
+  },
+  {
+   "num": "22",
+   "dir": "22-hotel-reservation",
+   "title": "Hotel Reservation System",
+   "phase": 5,
+   "goal": "Build a booking service that never double-books, even under heavy concurrency, and compare pessimistic locking, optimistic locking and DB constraints with real measurements.",
+   "short": "No-double-booking reservation API",
+   "effort": "1 week",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/22.%20Hotel%20Reservation%20System"
+  },
+  {
+   "num": "23",
+   "dir": "23-distributed-email",
+   "title": "Distributed Email Service",
+   "phase": 2,
+   "goal": "Build a small Gmail: receive mail over SMTP, store metadata and bodies separately, serve folders and threads over a web API with real-time updates, and add full-text search.",
+   "short": "SMTP-in mail service with threads + search",
+   "effort": "1 week",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/23.%20Distributed%20Email%20Service"
+  },
+  {
+   "num": "24",
+   "dir": "24-object-storage",
+   "title": "S3-like Object Storage",
+   "phase": 4,
+   "goal": "Build a mini S3: a metadata service, data nodes that pack small objects into large append-only files, checksums, versioning, multipart upload and garbage collection.",
+   "short": "Mini S3: packed data files, versioning, GC",
+   "effort": "2 weeks",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/24.%20S3-like%20Object%20Storage"
+  },
+  {
+   "num": "25",
+   "dir": "25-gaming-leaderboard",
+   "title": "Real-time Gaming Leaderboard",
+   "phase": 5,
+   "goal": "Build a real-time monthly leaderboard on Redis sorted sets, then implement the skip list underneath yourself to understand why it's O(log n).",
+   "short": "Skip-list + Redis sorted-set leaderboard",
+   "effort": "4-5 days",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/25.%20Real-time%20Gaming%20Leaderboard"
+  },
+  {
+   "num": "26",
+   "dir": "26-payment-system",
+   "title": "Payment System",
+   "phase": 5,
+   "goal": "Build a pay-in flow end to end: checkout -> payment service -> mock PSP with a hosted payment page and webhooks -> double-entry ledger -> wallet, plus retries, idempotency and nightly reconciliation.",
+   "short": "Pay-in flow with mock PSP + double-entry ledger",
+   "effort": "1-2 weeks",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/26.%20Payment%20System"
+  },
+  {
+   "num": "27",
+   "dir": "27-digital-wallet",
+   "title": "Digital Wallet",
+   "phase": 5,
+   "goal": "Build a wallet that moves money between accounts with an auditable event log: event sourcing with replayable state, snapshots, and a distributed transfer across shards using TC/C and Saga.",
+   "short": "Event-sourced wallet with TC/C + Saga",
+   "effort": "1-2 weeks",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/27.%20%20Digital%20Wallet"
+  },
+  {
+   "num": "28",
+   "dir": "28-stock-exchange",
+   "title": "Stock Exchange",
+   "phase": 5,
+   "goal": "Build a low-latency exchange core: order manager with risk checks, a sequencer, a price-time-priority matching engine, market data (L1/L2 and candlesticks), and deterministic replay from the event log.",
+   "short": "Matching engine + sequencer + market data",
+   "effort": "2 weeks",
+   "notes": "https://github.com/liquidslr/system-design-notes/tree/main/28.%20Stock%20Exchange"
+  },
+  {
+   "num": "29",
+   "dir": "29-principles",
+   "title": "Principles & Theorems",
+   "phase": 6,
+   "goal": "Get the theory every design argument leans on into your hands: CAP and PACELC, eventual consistency, latency vs throughput, percentiles and tail latency, network partitions and clock skew.",
+   "short": "Percentiles, tail latency, quorums, Lamport clocks",
+   "effort": "3-5 days",
+   "notes": null
+  },
+  {
+   "num": "30",
+   "dir": "30-networking",
+   "title": "Networking & Protocols",
+   "phase": 6,
+   "goal": "Understand what's under every RPC: DNS resolution and caching, TCP vs UDP, HTTP/1.1 vs HTTP/2 vs HTTP/3, and gRPC's wire format.",
+   "short": "Varints, gRPC frames, DNS resolver + cache",
+   "effort": "3-5 days",
+   "notes": null
+  },
+  {
+   "num": "31",
+   "dir": "31-api-edge",
+   "title": "APIs & the Edge",
+   "phase": 6,
+   "goal": "Build the layer between clients and services: a reverse proxy with weighted load balancing, an API gateway that routes by version, and signed webhooks.",
+   "short": "Weighted LB, versioned gateway, signed webhooks",
+   "effort": "3-5 days",
+   "notes": null
+  },
+  {
+   "num": "32",
+   "dir": "32-realtime-transports",
+   "title": "Real-time Transports",
+   "phase": 6,
+   "goal": "Compare the three ways a server pushes data to a browser by implementing their wire formats: WebSocket frames, Server-Sent Events and long polling.",
+   "short": "WebSocket frames, SSE parser, long-poll broker",
+   "effort": "3-5 days",
+   "notes": null
+  },
+  {
+   "num": "33",
+   "dir": "33-databases-in-practice",
+   "title": "Databases in Practice",
+   "phase": 6,
+   "goal": "Make a slow database fast with your own hands: add the right index, read query plans, kill an N+1, page with keyset pagination, pool connections, and route reads to replicas.",
+   "short": "Indexes, query plans, N+1, keyset paging, pooling",
+   "effort": "3-5 days",
+   "notes": null
+  },
+  {
+   "num": "34",
+   "dir": "34-replication-consensus",
+   "title": "Replication, Sharding & Leader Election",
+   "phase": 6,
+   "goal": "Understand how data is copied and split across machines and how a cluster agrees on a leader: hash vs range partitioning, read-your-writes over async replicas, and Raft-style elections.",
+   "short": "Raft votes, partitioners, read-your-writes",
+   "effort": "3-5 days",
+   "notes": null
+  },
+  {
+   "num": "35",
+   "dir": "35-caching-deep-dive",
+   "title": "Caching Deep Dive: CDN, Edge & Invalidation",
+   "phase": 6,
+   "goal": "Go beyond cache-aside: build an O(1) LRU, an edge cache with TTL, stale-while-revalidate and tag purges, and versioned asset URLs.",
+   "short": "O(1) LRU, edge cache with SWR + tag purge",
+   "effort": "3-5 days",
+   "notes": null
+  },
+  {
+   "num": "36",
+   "dir": "36-async-processing",
+   "title": "Async Processing: Queues, Pub/Sub, Events & Cron",
+   "phase": 7,
+   "goal": "Move slow work off the request path: a work queue with visibility timeouts and a dead-letter queue, a pub/sub event bus, and a cron scheduler you write yourself.",
+   "short": "Cron parser, SQS-style queue + DLQ, event bus",
+   "effort": "3-5 days",
+   "notes": null
+  },
+  {
+   "num": "37",
+   "dir": "37-distributed-transactions",
+   "title": "Distributed Transactions: 2PC, Sagas, Outbox & Idempotency",
+   "phase": 7,
+   "goal": "Keep data consistent across services without a single database transaction: two-phase commit, orchestrated sagas with compensations, the transactional outbox and idempotency keys.",
+   "short": "2PC, saga, outbox, idempotency store",
+   "effort": "3-5 days",
+   "notes": null
+  },
+  {
+   "num": "38",
+   "dir": "38-concurrency-locking",
+   "title": "Concurrency & Locking",
+   "phase": 7,
+   "goal": "See race conditions and deadlocks happen, then prevent them: thread-safe code, lock ordering, deadlock detection, optimistic vs pessimistic locking, and distributed locks with leases and fencing tokens.",
+   "short": "Lock ordering, deadlock detection, fencing tokens",
+   "effort": "3-5 days",
+   "notes": null
+  },
+  {
+   "num": "39",
+   "dir": "39-memory-gc",
+   "title": "Memory Leaks & Garbage Collection",
+   "phase": 7,
+   "goal": "Understand how runtimes free memory and how services still leak it: reference counting vs mark-and-sweep, generational GC, and finding a leak from heap snapshots.",
+   "short": "Refcount vs mark-sweep, leak detection",
+   "effort": "3-5 days",
+   "notes": null
+  },
+  {
+   "num": "40",
+   "dir": "40-resilience-patterns",
+   "title": "Resilience Patterns",
+   "phase": 7,
+   "goal": "Make services survive slow and failing dependencies: timeouts and deadlines, retries with exponential backoff and jitter, circuit breakers and backpressure.",
+   "short": "Circuit breaker, jittered retries, deadlines, backpressure",
+   "effort": "3-5 days",
+   "notes": null
+  },
+  {
+   "num": "41",
+   "dir": "41-scaling-serverless-cost",
+   "title": "Scaling, Serverless & Cost",
+   "phase": 7,
+   "goal": "Decide how and when to scale and what it costs: target-tracking autoscaling, horizontal vs vertical, serverless cold starts and limits, and break-even maths between serverless and servers.",
+   "short": "Target-tracking autoscaler, cold starts, cost maths",
+   "effort": "3-5 days",
+   "notes": null
+  },
+  {
+   "num": "42",
+   "dir": "42-containers-orchestration",
+   "title": "Containers & Orchestration",
+   "phase": 8,
+   "goal": "Learn what Docker and Kubernetes actually do by writing the core loops yourself: a reconciler that drives actual state to desired state, liveness/readiness probes with CrashLoopBackOff, and a service registry with TTL heartbeats.",
+   "short": "Reconciler, probes, CrashLoopBackOff, registry",
+   "effort": "3-5 days",
+   "notes": null
+  },
+  {
+   "num": "43",
+   "dir": "43-infrastructure-as-code",
+   "title": "Infrastructure as Code: Terraform & Helm",
+   "phase": 8,
+   "goal": "Understand the engine behind `terraform plan` and `helm template` by building them small: diff desired vs current state into a plan, order changes by dependency, and render templated manifests from values.",
+   "short": "Terraform-style plan + Helm-style templates",
+   "effort": "3-5 days",
+   "notes": null
+  },
+  {
+   "num": "44",
+   "dir": "44-cicd-dependencies",
+   "title": "CI/CD, Build Caching & Dependencies",
+   "phase": 8,
+   "goal": "Build the pieces behind every pipeline: semantic version parsing and ranges, a dependency resolver that shows why dependency hell happens, and content-addressed build caching that skips unchanged steps.",
+   "short": "Semver ranges, dependency resolver, build cache keys",
+   "effort": "3-5 days",
+   "notes": null
+  },
+  {
+   "num": "45",
+   "dir": "45-deployments-releases",
+   "title": "Deployments & Releases",
+   "phase": 8,
+   "goal": "Ship changes safely: feature flags with stable percentage rollouts, rolling deployments with surge and unavailability budgets, blue-green switches, canary analysis and fast rollbacks.",
+   "short": "Flags, rolling plans, canary analysis, blue-green",
+   "effort": "3-5 days",
+   "notes": null
+  },
+  {
+   "num": "46",
+   "dir": "46-observability",
+   "title": "Observability: Logs, Metrics, Traces & SLOs",
+   "phase": 8,
+   "goal": "Know what your system is doing and whether users are happy: structured logs, metrics, distributed tracing with W3C trace context, SLIs and SLOs, error budgets and burn-rate alerts.",
+   "short": "Traceparent, JSON logs, error budgets, burn rate",
+   "effort": "3-5 days",
+   "notes": null
+  },
+  {
+   "num": "47",
+   "dir": "47-identity-secrets-crypto",
+   "title": "Identity, Secrets & Encryption",
+   "phase": 9,
+   "goal": "Build the security plumbing every service needs: JWTs with key rotation, OAuth's PKCE, IAM policy evaluation, secret redaction, and envelope encryption at rest and TLS in transit.",
+   "short": "JWT kid rotation, PKCE, IAM, redaction",
+   "effort": "3-5 days",
+   "notes": null
+  },
+  {
+   "num": "48",
+   "dir": "48-web-security",
+   "title": "Web Application Security",
+   "phase": 9,
+   "goal": "Attack and defend a small web app: CORS, CSRF, SQL injection, XSS, SSRF, plus the edge defences (WAF rules and DDoS protection).",
+   "short": "CORS, CSRF, XSS, SQLi, SSRF, WAF",
+   "effort": "3-5 days",
+   "notes": null
+  },
+  {
+   "num": "49",
+   "dir": "49-schema-evolution",
+   "title": "Schema Evolution: Migrations & Versioning",
+   "phase": 8,
+   "goal": "Change databases and data formats without downtime: a versioned migration runner with checksums and rollback, the expand/contract pattern, and upcasters for versioned records and events.",
+   "short": "Migration runner with checksums, upcasters",
+   "effort": "3-5 days",
+   "notes": null
+  },
+  {
+   "num": "50",
+   "dir": "50-reliability-dr",
+   "title": "Reliability & Disaster Recovery",
+   "phase": 8,
+   "goal": "Plan for the bad day: backups with retention and restore drills, failure detection and failover to the most up-to-date replica, multi-region routing, and chaos experiments that prove it works.",
+   "short": "GFS backups, failover by LSN, geo routing, chaos",
+   "effort": "3-5 days",
+   "notes": null
+  },
+  {
+   "num": "51",
+   "dir": "51-incidents-oncall",
+   "title": "Production Incidents, On-Call & Postmortems",
+   "phase": 8,
+   "goal": "Practise the human side of operating systems: classify and run incidents, measure detection and recovery times, build a fair on-call rotation and write blameless postmortems.",
+   "short": "Severity, MTTx, rotations, blameless postmortems",
+   "effort": "3-5 days",
+   "notes": null
+  }
+ ]
+}

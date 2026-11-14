@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>System Design, Hands-On</title>
+<meta name="description" content="51 hands-on system design chapters with live, editable demos and in-browser Python tests. All 111 core concepts covered.">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="./">System Design, Hands-On</a>
+  <nav>
+    <a href="#method">Method</a>
+    <a href="#chapters">Chapters</a>
+    <a href="#coverage">111 concepts</a>
+    <a href="https://github.com/anandmukul93/system-design-handson">GitHub</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Learn system design by building and breaking it.</h1>
+    <p>Every chapter has a short lesson, an interactive simulation running right here in your browser, Python starter
+      code with tests you can run in the page, failure experiments and review questions. Chapters 01-28 follow
+      <em>System Design Interview</em> volumes 1 and 2; chapters 29-51 cover the rest of the 111-concept checklist.</p>
+    <a class="btn primary" href="chapter.html?ch=01-scaling">Start with chapter 01</a>
+    <a class="btn" href="#coverage">Browse the 111 concepts</a>
+    <div class="kpis" id="kpis"></div>
+  </section>
+
+  <h2 class="sec" id="method">The method, for every chapter</h2>
+  <p class="lead">Same six steps each time, so you always know what to do next.</p>
+  <div class="steps">
+    <div class="step"><b>Concepts</b><span>Read what each idea is and why it exists.</span></div>
+    <div class="step"><b>Trade-offs</b><span>Learn the knobs, their costs and the usual optimizations.</span></div>
+    <div class="step"><b>Demo</b><span>Play with the live simulation, then edit its source and rerun it.</span></div>
+    <div class="step"><b>Build it</b><span>Design first, then make the Python tests pass, in the page or locally.</span></div>
+    <div class="step"><b>Break it</b><span>Kill, partition, overload and corrupt, and watch what happens.</span></div>
+    <div class="step"><b>Review</b><span>Answer the questions and write up your results.</span></div>
+  </div>
+
+  <h2 class="sec" id="chapters">Chapters</h2>
+  <p class="lead">Grouped by phase. Later chapters reuse earlier ones; the fundamentals (phase 6) can run alongside phases 1-2.</p>
+  <div id="phases"><p class="lead">Loading chapters…</p></div>
+
+  <h2 class="sec" id="coverage">The 111 concepts</h2>
+  <p class="lead">Where each concept is taught. <span class="chip covered">covered</span> built in chapters 01-28 ·
+    <span class="chip deepened">deepened</span> touched in 01-28, now with a dedicated chapter ·
+    <span class="chip new">new</span> added in chapters 29-51.</p>
+  <div class="filters">
+    <input id="q" type="search" placeholder="Filter concepts, e.g. cache, lock, TLS" aria-label="Filter concepts">
+    <select id="st" aria-label="Filter by status">
+      <option value="">All statuses</option><option value="covered">Covered</option>
+      <option value="deepened">Deepened</option><option value="new">New</option>
+    </select>
+  </div>
+  <div class="tablewrap"><table class="matrix">
+    <thead><tr><th>#</th><th>Concept</th><th>Status</th><th>Chapters</th></tr></thead>
+    <tbody id="matrix"></tbody>
+  </table></div>
+</main>
+<footer><div class="wrap">Built from <a href="https://github.com/anandmukul93/system-design-handson">anandmukul93/system-design-handson</a>.
+  Chapter notes for 01-28: <a href="https://github.com/liquidslr/system-design-notes">liquidslr/system-design-notes</a>.</div></footer>
+<script src="assets/catalog.js"></script>
+</body>
+</html>

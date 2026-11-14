@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter · System Design, Hands-On</title>
+<link rel="stylesheet" href="assets/app.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="./">System Design, Hands-On</a>
+  <nav>
+    <a href="./#chapters">All chapters</a>
+    <a href="./#coverage">111 concepts</a>
+    <a id="gh" href="https://github.com/anandmukul93/system-design-handson">GitHub</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <div class="ch-head">
+    <div class="crumbs" id="crumbs"></div>
+    <h1 id="title">Loading…</h1>
+    <p id="goal"></p>
+    <div class="chips" id="chips"></div>
+  </div>
+
+  <section class="panel" id="demo-panel">
+    <div class="bar">
+      <h2>Demo</h2>
+      <span class="status" id="demo-status"></span>
+      <button class="btn" id="edit">Edit source</button>
+      <button class="btn" id="reset" title="Discard your edits">Reset</button>
+      <button class="btn primary" id="run">Run ▶</button>
+    </div>
+    <iframe class="demo" id="frame" sandbox="allow-scripts" title="Chapter demo"></iframe>
+    <div class="editor" id="demo-editor">
+      <textarea class="code" id="demo-src" spellcheck="false" aria-label="Demo source code"></textarea>
+    </div>
+  </section>
+
+  <section class="panel" id="py-panel">
+    <div class="bar">
+      <h2>Build it in the browser</h2>
+      <span class="status" id="py-status">Edit the stubs, then run the tests with Pyodide (Python in WebAssembly).</span>
+      <button class="btn" id="py-reset" title="Discard your edits to the Python files">Reset</button>
+      <button class="btn primary" id="py-run">Run Python tests</button>
+    </div>
+    <div class="tabs" id="py-tabs"></div>
+    <textarea class="code" id="py-src" spellcheck="false" aria-label="Python source code"></textarea>
+    <pre class="out" id="py-out"></pre>
+  </section>
+
+  <section class="panel">
+    <div class="bar"><h2>Lesson</h2><a class="btn" id="readme-link" href="#">View on GitHub</a></div>
+    <article class="lesson" id="lesson"><p>Loading…</p></article>
+  </section>
+
+  <div class="pager" id="pager"></div>
+</main>
+<footer><div class="wrap">Demos run in a sandboxed iframe with no access to this site, your cookies or storage. Your code edits stay in this browser.</div></footer>
+<script src="assets/chapter.js"></script>
+</body>
+</html>
